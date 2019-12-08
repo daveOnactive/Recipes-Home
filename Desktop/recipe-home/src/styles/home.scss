@@ -1,8 +1,8 @@
 @import './variables.scss';
 
 .container {
-  background: addColor(sub-color);
-  // width: 100vh;
+  background: addColor(minor-color);
+  overflow-y: auto;
   height:100vh;
   .landing-page {
     width: 100%;
@@ -19,12 +19,5 @@
     top: 0;
     left: 0;
     width: 100%;
-  }
-
-  RecipeList {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
   }
 }

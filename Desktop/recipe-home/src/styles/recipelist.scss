@@ -1,9 +1,31 @@
 @import './variables.scss';
 
-.card {
-  width: 100%;
-  height: 200px;
-  background: addColor(main-color);
-  color: addColor(sub-color);
-  margin: 3rem;
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .card {
+    @include desktop() {
+      width: 600px;
+      padding: 0.5rem;
+      margin: 2rem;
+    }
+    width: 95%;
+    // height: 100px;
+    background: addColor(main-color);
+    color: addColor(sub-color);
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    .recipe-image {
+      @include desktop() {
+        width: 100%;
+        margin-right: 0.5rem;
+      }
+      width: 100%;
+      margin-right: 0.5rem;
+      background: #fff;
+    }
+  }
 }
