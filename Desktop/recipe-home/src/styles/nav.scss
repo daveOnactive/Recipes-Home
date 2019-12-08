@@ -1,0 +1,14 @@
+@import './variables.scss';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  color: addColor(sub-color);
+  div {
+    padding: 0 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

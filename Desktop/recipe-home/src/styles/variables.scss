@@ -6,7 +6,7 @@ $colors: (
 
 $desktop: 740px;
 
-@function color($color-name) {
+@function addColor($color-name) {
   @return map-get($map: $colors, $key: $color-name )
 }
 

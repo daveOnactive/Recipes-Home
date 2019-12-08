@@ -1,9 +1,9 @@
 import React from 'react';
-// import '../../styles/home.scss';
+import '../../styles/landing.scss';
 
 const Landing = () => {
   return (
-    <div className="div">
+    <div>
       <svg viewBox="0 0 1400 980" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g id="Frame">
           <path id="Vector" d="M1400 0H0V980H1400V0Z" fill="#615765" />
