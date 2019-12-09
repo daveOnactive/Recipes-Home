@@ -7,8 +7,13 @@ nav {
   background: none;
   color: addColor(sub-color);
   div {
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     cursor: pointer;
     font-weight: bold;
+  }
+
+  .link {
+    color: addColor(sub-color);
+    text-decoration: none;
   }
 }

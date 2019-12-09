@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import '../styles/nav.scss';
 
 const Nav = () => {
@@ -8,7 +9,9 @@ const Nav = () => {
         RECIPE-HOMES
       </div>
       <div className="nav-links">
-        Home
+        <Link to="/" className="link">
+          Home
+        </Link>
       </div>
     </nav>
   )

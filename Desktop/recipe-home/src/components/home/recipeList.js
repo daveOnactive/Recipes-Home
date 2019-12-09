@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../styles/recipelist.scss';
 
-const RecipeList = ({items}) => {
+const RecipeList = ({ items, key }) => {
   const [list, setList] = useState([]);
   useEffect(() => {
     setList(items);
