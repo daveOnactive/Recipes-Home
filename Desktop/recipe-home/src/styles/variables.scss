@@ -4,7 +4,8 @@ $colors: (
   minor-color: #fab486
 );
 
-$desktop: 740px;
+$desktop: 800px;
+$ipad: 740px;
 
 @function addColor($color-name) {
   @return map-get($map: $colors, $key: $color-name )

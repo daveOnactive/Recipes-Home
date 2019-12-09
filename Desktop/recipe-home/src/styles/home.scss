@@ -6,18 +6,35 @@
   height:100vh;
   .landing-page {
     width: 100%;
-    height: 50vh;
+    min-height: 60vh;
+    box-sizing: border-box;
     padding-top: 2rem;
     background: addColor(main-color);
+    display: flex;
+    flex-direction: column;
     @include desktop() {
+      flex-flow: row-reverse;
       height: 100vh;
+      justify-content: space-between;
     }
-  }
 
-  Nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    .landing-page-content {
+      // background: #fff;
+      padding: 0.5rem 1.5rem;
+      @include desktop() {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      p {
+        color: addColor(sub-color);
+        line-height: 1.7;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
   }
 }

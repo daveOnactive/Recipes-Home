@@ -13,9 +13,11 @@ const Home = () => {
   });
   return(
     <div className="container">
-      <Nav />
       <div className="landing-page">
         <Landing />
+        <div className="landing-page-content">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sunt deserunt quod repellat provident dolore aliquid magni! Accusantium, voluptates itaque! Expedita unde enim magnam rem!</p>
+        </div>
       </div>
       <RecipeList items = { api } />
     </div>
