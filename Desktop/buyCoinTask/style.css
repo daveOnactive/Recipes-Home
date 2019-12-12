@@ -1,8 +1,105 @@
-/* Some starer styling. Feel free to change anything you like */
-
 body {
-  background-color: rgb(220,220,220);
+  background-color: gainsboro;
   font-size: 15px;
   line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
 }
+
+tr {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 740px) {
+  tr {
+    display: table-row;
+  }
+}
+
+main {
+  width: 75%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 0 5px #dfdfdf;
+          box-shadow: 0 0 5px #dfdfdf;
+}
+
+@media (min-width: 740px) {
+  main {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+main table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background: #fff;
+  border-radius: 5px 5px 0 0;
+  height: 100%;
+}
+
+main table thead {
+  display: none;
+}
+
+@media (min-width: 740px) {
+  main table thead {
+    display: table-header-group;
+  }
+}
+
+main table th {
+  padding: .2rem .5rem;
+  text-align: left;
+}
+
+main table td {
+  padding: .2rem .5rem;
+  text-align: left;
+}
+
+main table tbody tr:nth-child(odd) {
+  background-color: #eee6e6;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #eee6e6;
+  padding: .5rem 0;
+}
+
+.button button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.button button span {
+  font-weight: bold;
+}
+
+.head {
+  display: block;
+}
+
+@media (min-width: 740px) {
+  .head {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
