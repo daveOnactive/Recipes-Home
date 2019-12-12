@@ -1,0 +1,18 @@
+$colors: (
+  sub-color: #eae9f3,
+  main-color: #615765,
+  minor-color: #fab486
+);
+
+$desktop: 800px;
+$ipad: 740px;
+
+@function addColor($color-name) {
+  @return map-get($map: $colors, $key: $color-name )
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

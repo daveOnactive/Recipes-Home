@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  color: addColor(sub-color);
+  div {
+    padding: 0 2rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .link {
+    color: addColor(sub-color);
+    text-decoration: none;
+  }
+}

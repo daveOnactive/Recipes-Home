@@ -1,0 +1,9 @@
+@import './variables.scss';
+svg {
+  @include desktop() {
+    height: 100vh;
+    width: 50vw;
+  }
+  width: 100%;
+  height: 50vh;
+}
