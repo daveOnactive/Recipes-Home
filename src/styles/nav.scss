@@ -6,6 +6,7 @@ nav {
   align-items: center;
   background: none;
   color: addColor(sub-color);
+  z-index: 5;
   div {
     padding: 0 2rem;
     cursor: pointer;

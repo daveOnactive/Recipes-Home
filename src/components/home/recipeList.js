@@ -13,7 +13,7 @@ const RecipeList = ({ items }) => {
         <Link key = { item.id } to={`/recipe/${item.id}`} className="link">
           <div className="card">
             <div className="recipe-image">
-              <img src = {item.imageUrl} />
+              <img src={item.imageUrl} alt="food" />
             </div>
             <div className="recipe-content">
               <h4>{ item.title }</h4>

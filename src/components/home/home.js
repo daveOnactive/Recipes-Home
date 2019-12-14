@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Landing from './landing';
 import RecipeList from './recipeList';
 import '../../styles/home.scss';
 
 
 const Home = () => {
-  const [result, setResult] = useState('hello');
 
-  useEffect(() => {
-    console.log(result);
-  });
   return(
     <div className="container">
       <div className="landing-page">
@@ -83,9 +79,8 @@ const api = [
       "Water, as needed(details in recipe below)"
     ],
     "Before you cook": [
-      "Prepare the tomato stew. It is advisable to prepare tomato stew before hand and keep in the freezer. This is so that whenever you want to cook any jollof rice related dish, it is just a matter of adding it to your cooking.",
-      "If you will use whole chicken then wash and cut it into pieces. Cook with the thyme, Knorr cubes and 2 bulbs of onions (chopped). The cooking time depends on the type of chicken. The rooster or cockerel cooks much faster than the hen but the hen is definitely tastier. When done, grill it in an oven. You may also fry it. This is to give it a golden look which is more presentable especially if you have guests for dinner.",
-      "Parboil the rice. Rinse the parboiled rice and put in a sieve to drain."
+      "Parboil(precook) the Rice and set aside (Parboiling the rice, helps to start the cooking process and gets rid of the excess starch in the rice, that usually makes the rice grains to clump together)",
+      "Cook and fry/grill your meat ( beef/chicken/turkey ) and set aside the broth or stock"
     ],
     "Cooking Directions": [
   
