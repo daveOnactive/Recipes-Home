@@ -58,6 +58,27 @@
     padding: 2rem 0;
     li {
       margin: .5rem .7rem;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.title {
+  margin: 1rem 0;
+  h2 {
+    text-align: center;
+  }
+}
+
+.cook {
+  padding: 1rem 1.5rem;
+  div {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: .5fr 1.5fr;
+    @include desktop() {
+      grid-template-columns: .15fr 2fr;
     }
   }
 }

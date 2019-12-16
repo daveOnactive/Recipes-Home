@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Ingeligents from '../recipe/ingeligents';
+import Ingeligents from './ingredent';
 import Procedure from './procedure';
 import '../../styles/recipe.scss';
 
@@ -20,7 +20,7 @@ const Recipe = ({match}) => {
   return (
     <div className="recipe">
       {items.map(item => (
-        <div>
+        <div key={item.id}>
           <div className="parallax" style={{
           backgroundImage:`url(${item.imageUrl})`
         }}>
@@ -29,8 +29,10 @@ const Recipe = ({match}) => {
               <p>{ item.description }</p>
             </div>
           </div>
-          <Ingeligents ingeligent={ item.ingeligent }/>
-          <Procedure beforeCook={ item.Before you cook } />
+          <Ingeligents ingredent={ item.ingredent }/>
+          <Procedure 
+            beforeYouCook={ item.beforeYouCook } 
+            cookingDirection={ item.CookingDirections } />
         </div>
       ))}
     </div>
@@ -42,7 +44,7 @@ const api = [
     "id": 1,
     "title": "Egusi Soup (Fried Method)",
     "description": "Particularly, in Nigerian culture, egusi is a popular with pounded yam. These seeds are rich in fat and protein, and add these essential nutrients into West African Cuisine. Nigerian Egusi Soup is a soup thickened with ground melon seeds and contains leafy and other vegetables",
-    "ingeligent": [
+    "ingredent": [
       "4 cups (500g) Egusi (Melon) seeds",
       "3 cooking spoons red palm oil",
       "Beef: best cut and Shaki (cow tripe)",
@@ -53,7 +55,7 @@ const api = [
       "3 small stock cubes",
       "1 small ogiri okpei (optional)"
     ],
-    "BeforeYouCook": [
+    "beforeYouCook": [
       "Before preparing the soup, soak the dry fish and stock fish till soft. If you are using the very tough stockfish, boil it for 20 minutes and leave in the pot with the hot water to soak for about an hour. If using the softer stockfish, you can just soak them in cool water till you can break them apart with your hands.",
       "When the fish and stockfish are soft, de-bone and break them into sizeable chunks.",
       "Much closer to your cooking time, grind the egusi with a dry mill. Grind the crayfish and the dry pepper separately and set aside.",

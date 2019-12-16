@@ -2,32 +2,44 @@
 
 .recipe-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
+  // flex-direction: column;
   .card {
     @include desktop() {
-      width: 600px;
+      width: 350px;
       padding: 0.5rem;
       margin: 2rem;
     }
     width: 90%;
     background: addColor(main-color);
     color: addColor(sub-color);
-    margin: 1rem;
-    display: flex;
-    justify-content: space-evenly;
+    margin: 1rem auto;
+    text-align: center;
     .recipe-image {
       @include desktop() {
         width: 100%;
-        margin-right: 0.5rem;
+        margin: 0;
+        padding-top: 0;
       }
-      width: 100%;
-      margin-right: 0.5rem;
+      width: 95%;
+      margin: 1rem auto;
+      padding-top: .5rem;
       img {
         width: 100%;
         height: 100%;
       }
+    }
+    .recipe-btn {
+      background: addColor(minor-color);
+      border: none;
+      outline: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      color: #fff;
+      margin: 1rem 0;
     }
   }
 }

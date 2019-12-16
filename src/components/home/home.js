@@ -1,11 +1,10 @@
 import React from 'react';
 import Landing from './landing';
-import RecipeList from './recipeList';
+import ReceipeList from './receipeList';
 import '../../styles/home.scss';
 
 
 const Home = () => {
-
   return(
     <div className="container">
       <div className="landing-page">
@@ -14,7 +13,7 @@ const Home = () => {
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sunt deserunt quod repellat provident dolore aliquid magni! Accusantium, voluptates itaque! Expedita unde enim magnam rem!</p>
         </div>
       </div>
-      <RecipeList items = { api } />
+      <ReceipeList items = { api } />
     </div>
   );
 }
@@ -35,7 +34,7 @@ const api = [
       "3 small stock cubes",
       "1 small ogiri okpei (optional)"
     ],
-    "Before you cook": [
+    "BeforeYouCook": [
       "Before preparing the soup, soak the dry fish and stock fish till soft. If you are using the very tough stockfish, boil it for 20 minutes and leave in the pot with the hot water to soak for about an hour. If using the softer stockfish, you can just soak them in cool water till you can break them apart with your hands.",
       "When the fish and stockfish are soft, de-bone and break them into sizeable chunks.",
       "Much closer to your cooking time, grind the egusi with a dry mill. Grind the crayfish and the dry pepper separately and set aside.",
@@ -43,7 +42,7 @@ const api = [
       "Cook the beef and fish with the stock cubes till they are well done. You should start cooking the toughest meat and fish first and add the others as they get done. If using a normal pot, I will start with stockfish and shaki, add beef after about 1 hour and cook till done. I can add the dry fish when all the other meat and fish are cooked because it is already cooked, you just need to cook it long enough till it is soft and integrated with the rest of the ingredients. With a pressure pot, I do it differently but that is a process for another post.",
       "Set all these aside."
     ],
-    "Cooking Directions": [
+    "CookingDirections": [
       "Pour the red palm oil into a dry pot and set on the stove to heat. As soon as the oil melts, add the ground egusi and start frying. If the oil is not congealed, add the egusi as soon as the oil is translucent. Mix the ground egusi with oil till every grain of egusi turns yellow.",
       "Start stirring the egusi on low to medium heat. Keep stir-frying for about 10 minutes.",
       "Add the meat/fish stock (water from cooking the fish and meat) little by little while still stirring the egusi. So you add a bit of the stock, stir-fry for some time, add another, stir-fry and so on. When the stock is exhausted and you feel that the soup is still too thick, you can start adding hot water in the same way till you get the consistency you want. If your choice of vegetable is bitter leaf, add it at this time.",

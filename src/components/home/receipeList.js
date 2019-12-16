@@ -19,6 +19,11 @@ const RecipeList = ({ items }) => {
               <h4>{ item.title }</h4>
               <p>{ item.description.slice(0, 70) }...</p>
             </div>
+            <Link to={`/recipe/${item.id}`} className="link">
+              <button className="recipe-btn">
+                view Receipe
+              </button>
+            </Link>
           </div>
         </Link>
       ))}

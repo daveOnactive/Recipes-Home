@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/recipe.scss';
 
-const Ingeligents = ({ingeligent}) => {
+const Ingeligents = ({ingredent}) => {
   return (
     <div className="ingeligent">
       <h3>
@@ -11,8 +11,8 @@ const Ingeligents = ({ingeligent}) => {
 
       </div>
       <ol>
-        {ingeligent.map(item => (
-          <li>{item}</li>
+        {ingredent.map(item => (
+          <li key={item}>{item}</li>
         ))}
       </ol>
 
