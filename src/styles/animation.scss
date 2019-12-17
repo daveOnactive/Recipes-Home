@@ -6,3 +6,19 @@
   background: #fff;
   border-radius: 50%;
 }
+
+.icon-svg {
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.icon-svg-two {
+  display: flex;
+  justify-content: space-around;
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+}

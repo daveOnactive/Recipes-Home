@@ -13,7 +13,7 @@ const Procedure = ({ beforeYouCook, cookingDirection }) => {
         <h3>before you cook</h3>
         {beforeYouCook.map(item => (
           <div key={item}>
-            <Icon />
+            <Icon iconToDisplay={'before'} />
             <p>{item}</p>
           </div>
         ))}
@@ -23,7 +23,7 @@ const Procedure = ({ beforeYouCook, cookingDirection }) => {
         <h3>cooking direction</h3>
         {cookingDirection.map(item => (
           <div key={item}>
-            <Icon />
+            <Icon iconToDisplay={'direction'} />
             <p>{item}</p>
           </div>
         ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../../shared/icon';
 import '../../styles/recipe.scss';
 
 const Ingeligents = ({ingredent}) => {
@@ -7,8 +8,8 @@ const Ingeligents = ({ingredent}) => {
       <h3>
         ingeligents
       </h3>
-      <div className="ingeligent-image">
-
+      <div className="ingredient-icons">
+        <Icon iconToDisplay={'ingredient'} />
       </div>
       <ol>
         {ingredent.map(item => (
