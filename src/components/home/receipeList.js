@@ -20,7 +20,7 @@ const RecipeList = ({ items }) => {
               <p>{ item.description.slice(0, 70) }...</p>
             </div>
             <Link to={`/recipe/${item.id}`} className="link">
-              <button className="recipe-btn">
+              <button type="button" className="recipe-btn">
                 view Receipe
               </button>
             </Link>
