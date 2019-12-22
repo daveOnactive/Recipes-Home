@@ -1,6 +1,6 @@
 @import './variables.scss';
 .gallery-container {
-  background: addColor(minor-color);
+  background: addColor(use);
   min-height: 100vh;
    box-sizing: border-box;
    padding-top: 4rem;

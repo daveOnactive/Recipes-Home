@@ -6,7 +6,7 @@ const Ingeligents = ({ingredent}) => {
   return (
     <div className="ingeligent">
       <h3>
-        ingeligents
+        ingredients
       </h3>
       <div className="ingredient-icons">
         <Icon iconToDisplay={'ingredient'} />
