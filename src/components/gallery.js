@@ -1,10 +1,13 @@
 import React from 'react';
 import ReceipeList from './home/receipeList';
+import '../styles/gallery.scss';
 
 const Gallery = () => {
   return (
-    <div>
-      <ReceipeList items = { api } />
+    <div className="gallery-container">
+      <div>
+        <ReceipeList items = { api } />
+      </div>
     </div>
   )
 }

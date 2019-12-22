@@ -5,7 +5,6 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  // flex-direction: column;
   .card {
     @include desktop() {
       width: 350px;
@@ -25,7 +24,7 @@
         padding-top: 0;
       }
       width: 95%;
-      margin: 1rem auto;
+      margin: 0rem auto;
       padding-top: .5rem;
       img {
         width: 100%;
