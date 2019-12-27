@@ -5,18 +5,12 @@ import Recipe from './components/recipe/recipe.js';
 import Gallery from './components/gallery.js';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route }  from 'react-router-dom';
-
-
-export const context = React.createContext();
+import { receipeProvider as Provider } from './shared/receipeContext';
 
 function App() {
-
-  const items = {
-    "show": true
-  }
   return (
     <Router>
-      <context.Provider value={items}>
+      <Provider>
         <div className="App">
           <Nav />
           <Switch>
@@ -25,7 +19,7 @@ function App() {
             <Route path="/recipe/:id" component = { Recipe } />
           </Switch>
         </div>
-      </context.Provider>
+      </Provider>
     </Router>
   );
 }

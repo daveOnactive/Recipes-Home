@@ -1,10 +1,34 @@
-import React, {useState, useEffect} from 'react';
+export const data = () => {
+  const allData = getAllData();
+  return {
+    allReceipe: allData
+  };
+};
 
-const fetchData = async () => {
-  const response = await fetch();
-  const data = await response.json();
+export const singleData = (id) => {
+  return getOneData(id);
+};
 
-  return data;
+const getAllData = async () => {
+  const api = 'http://localhost:4000/api/receipe';
+  try {
+    const response = await fetch(api);
+    const data = await response.json();
+    return data;
+  } catch(err) {
+    console.log(err);
+  }
+  
 }
 
-export default fetchData;
+const getOneData = async (id) => {
+  const api = 'http://localhost:4000/api/receipe';
+  try {
+    const response = await fetch(api);
+    const data = await response.json();
+    return data;
+  } catch(err) {
+
+  }
+}
+
