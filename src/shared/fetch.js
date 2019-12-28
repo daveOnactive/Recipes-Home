@@ -22,13 +22,13 @@ const getAllData = async () => {
 }
 
 const getOneData = async (id) => {
-  const api = 'http://localhost:4000/api/receipe';
+  const api = `http://localhost:4000/api/receipe/${id}`;
   try {
     const response = await fetch(api);
     const data = await response.json();
     return data;
   } catch(err) {
-
+    console.error(err);
   }
 }
 

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Icon from '../../shared/icon';
 import '../../styles/recipe.scss';
 
-const Ingeligents = ({ingredent}) => {
+const Ingredients = ({ingredient}) => {
+  // const [ingredients, setIngredients] = useState([]);
+  // useEffect(() => {
+  //   setIngredients(ingredient);
+  // })
   return (
     <div className="ingeligent">
       <h3>
@@ -12,7 +16,7 @@ const Ingeligents = ({ingredent}) => {
         <Icon iconToDisplay={'ingredient'} />
       </div>
       <ol>
-        {ingredent.map(item => (
+        {ingredient === ''? null : ingredient.map(item => (
           <li key={item}>{item}</li>
         ))}
       </ol>
@@ -21,4 +25,4 @@ const Ingeligents = ({ingredent}) => {
   )
 }
 
-export default Ingeligents;
+export default Ingredients;

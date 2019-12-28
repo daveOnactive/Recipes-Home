@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Ingeligents from './ingredent';
 import Procedure from './procedure';
 import { receipeContext } from '../../shared/receipeContext';
 import '../../styles/recipe.scss';
+import Ingredients from './ingredient';
 
 const Recipe = ({match}) => {
   const [ getReceipe ] = useContext(receipeContext);
@@ -11,28 +11,32 @@ const Recipe = ({match}) => {
   useEffect(() => {
     // setItems('hello');
     let x = getReceipe('single', match.params.id);
+    // setItems(x);
     console.log(x);
-  })
 
-  return (
+    return(() => {
+      setItems({});
+    });
+  });
+
+  return ( 
     <div className="recipe">
-      {/* {items.map(item => (
-        <div key={item.id}>
+      {
+        <div key={items.id}>
           <div className="parallax" style={{
-          backgroundImage:`url(${item.imageUrl})`
+          backgroundImage:`url(${items.imageUrl})`
         }}>
             <div className="para-content">
-              <h3>{ item.title }</h3>
-              <p>{ item.description }</p>
+              <h3>{ items.title }</h3>
+              <p>{ items.description }</p>
             </div>
           </div>
-          <Ingeligents ingredent={ item.ingredent }/>
-          <Procedure 
-            beforeYouCook={ item.beforeYouCook } 
-            cookingDirection={ item.CookingDirections } />
+          {/* <Ingredients ingredient={ items.ingredient }/> */}
+          {/* <Procedure 
+            beforeYouCook={ items.beforeYouCook } 
+            cookingDirection={ items.cookingDirections } /> */}
         </div>
-      ))} */}
-      <h1>{'HELLO WORLD'}</h1>
+      }
     </div>
   )
 }
