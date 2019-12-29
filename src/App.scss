@@ -1,3 +1,4 @@
+@import './styles/variables.scss';
 Nav {
   position: fixed;
   top: 0;
@@ -10,4 +11,24 @@ Nav {
     width: 200px;
     height: 50px;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 2.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: addColor(main-color);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: addColor(use); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

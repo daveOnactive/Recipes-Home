@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import Landing from './landing';
-import ReceipeList from './receipeList';
+import ReceipeList from '../../shared/receipeList';
 import { receipeContext } from '../../shared/receipeContext';
 import '../../styles/home.scss';
 

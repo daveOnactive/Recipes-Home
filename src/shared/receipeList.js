@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-import '../../styles/recipelist.scss';
+import '../styles/recipelist.scss';
 
 const RecipeList = ({ items }) => {
   const [list, setList] = useState([]);
@@ -10,8 +10,7 @@ const RecipeList = ({ items }) => {
   return (
     <div className="recipe-container">
       {list.map(item => (
-        <Link key = { item.id } to={`/recipe/${item.id}`} className="link">
-          <div className="card">
+          <div key = { item._id } className="card">
             <div className="recipe-image">
               <img src={item.imageUrl} alt="food" />
             </div>
@@ -25,7 +24,6 @@ const RecipeList = ({ items }) => {
               </button>
             </Link>
           </div>
-        </Link>
       ))}
     </div>
   )

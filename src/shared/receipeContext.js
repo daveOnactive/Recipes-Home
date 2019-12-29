@@ -1,4 +1,4 @@
-import React, {createContext, useState, useEffect} from 'react';
+import React, {createContext, useState} from 'react';
 import { data, singleData } from './fetch';
 
 export const receipeContext = createContext();
@@ -6,7 +6,6 @@ export const receipeContext = createContext();
 export const receipeProvider = props => {
 
   const [receipeList, setReceipeList] = useState([]);
-  const [singleReceipe, setSingleReceipe] = useState({});
 
   const getReceipe = (type, id) => {
     switch(type) {
@@ -18,9 +17,10 @@ export const receipeProvider = props => {
         return receipeList;
       case 'single':
         singleData(id).then(data => {
-          setSingleReceipe(data);
+          console.log(data);
         })
-        return singleReceipe;
+        // return singleReceipe;
+        break;
       default:
         return receipeList;
     }

@@ -6,18 +6,24 @@ import Ingredients from './ingredient';
 
 const Recipe = ({match}) => {
   const [ getReceipe ] = useContext(receipeContext);
-  const [items, setItems] = useState('');
-
+  const [items, setItems] = useState({});
+  
   useEffect(() => {
-    // setItems('hello');
-    let x = getReceipe('single', match.params.id);
-    // setItems(x);
-    console.log(x);
-
+    const data = getReceipe('all');
+    getSpecificData(data, match.params.id);
     return(() => {
-      setItems({});
+      setItems('');
     });
   });
+
+  const getSpecificData = (data, id) => {
+    data.filter(item => {
+      if(item._id === id) {
+        setItems(item);
+      }
+      return true;
+    });
+  };
 
   return ( 
     <div className="recipe">
@@ -31,10 +37,10 @@ const Recipe = ({match}) => {
               <p>{ items.description }</p>
             </div>
           </div>
-          {/* <Ingredients ingredient={ items.ingredient }/> */}
-          {/* <Procedure 
+          <Ingredients ingredient={ items.ingredient }/>
+          <Procedure 
             beforeYouCook={ items.beforeYouCook } 
-            cookingDirection={ items.cookingDirections } /> */}
+            cookingDirection={ items.cookingDirections } />
         </div>
       }
     </div>
