@@ -2,6 +2,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import Landing from './landing';
 import ReceipeList from '../../shared/receipeList';
 import { receipeContext } from '../../shared/receipeContext';
+import Loader from '../../shared/loader';
 import '../../styles/home.scss';
 
 
@@ -12,6 +13,13 @@ const Home = () => {
     const data = getReceipe('all');
     setReceipeData(data);
   })
+  if(receipeData.length === 0) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    )
+  }
   return(
     <div className="container">
       <div className="landing-page">

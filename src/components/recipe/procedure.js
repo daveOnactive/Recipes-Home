@@ -11,7 +11,7 @@ const Procedure = ({ beforeYouCook, cookingDirection }) => {
 
       <div className="cook">
         <h3>before you cook</h3>
-        {!beforeYouCook ? 'null' : beforeYouCook.map(item => (
+        {beforeYouCook.map(item => (
           <div key={item}>
             <Icon iconToDisplay={'before'} />
             <p>{item}</p>
@@ -21,7 +21,7 @@ const Procedure = ({ beforeYouCook, cookingDirection }) => {
 
       <div className="cook">
         <h3>cooking direction</h3>
-        {!cookingDirection ? 'null' : cookingDirection.map(item => (
+        {cookingDirection.map(item => (
           <div key={item}>
             <Icon iconToDisplay={'direction'} />
             <p>{item}</p>

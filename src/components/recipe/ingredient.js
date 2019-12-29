@@ -12,7 +12,7 @@ const Ingredients = ({ingredient}) => {
         <Icon iconToDisplay={'ingredient'} />
       </div>
       <ol>
-        {!ingredient ? 'null': ingredient.map(item => (
+        {ingredient.map(item => (
           <li key={item}>{item}</li>
         ))}
       </ol>

@@ -3,10 +3,11 @@ import Procedure from './procedure';
 import { receipeContext } from '../../shared/receipeContext';
 import '../../styles/recipe.scss';
 import Ingredients from './ingredient';
+import Loader from '../../shared/loader';
 
 const Recipe = ({match}) => {
   const [ getReceipe ] = useContext(receipeContext);
-  const [items, setItems] = useState({});
+  const [items, setItems] = useState();
   
   useEffect(() => {
     const data = getReceipe('all');
@@ -24,6 +25,14 @@ const Recipe = ({match}) => {
       return true;
     });
   };
+
+  if(!items) {
+    return (
+      <div>
+        <Loader />
+      </div>
+    )
+  }
 
   return ( 
     <div className="recipe">
