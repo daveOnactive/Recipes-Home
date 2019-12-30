@@ -6,7 +6,6 @@ export const receipeContext = createContext();
 export const receipeProvider = props => {
 
   const [receipeList, setReceipeList] = useState([]);
-
   const getReceipe = (type, id) => {
     switch(type) {
       case 'all':

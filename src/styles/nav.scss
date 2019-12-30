@@ -6,7 +6,8 @@ nav {
   align-items: center;
   background: none;
   color: addColor(sub-color);
-  z-index: 5;
+  // z-index: 5;
+  width: 100%;
   .nav-links {
     padding: 0 2rem;
     cursor: pointer;
@@ -24,4 +25,8 @@ nav {
     height: 50px;
     margin-top: .5rem;
   }
+}
+
+.toggle {
+  // background: addColor(main-color);
 }

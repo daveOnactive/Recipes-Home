@@ -1,5 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import Landing from './landing';
+import Nav from '../../shared/nav';
 import ReceipeList from '../../shared/receipeList';
 import { receipeContext } from '../../shared/receipeContext';
 import Loader from '../../shared/loader';
@@ -22,6 +23,7 @@ const Home = () => {
   }
   return(
     <div className="container">
+      <Nav />
       <div className="landing-page">
         <Landing />
         <div className="landing-page-content">

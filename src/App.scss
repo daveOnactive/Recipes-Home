@@ -1,9 +1,14 @@
 @import './styles/variables.scss';
 Nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  // // position: fixed;
+  // // top: 0;
+  // // left: 0;
+  // width: 100%;
+  // overflow: hidden;
+}
+
+.App {
+  overflow-x: hidden;
 }
 
 .svg {

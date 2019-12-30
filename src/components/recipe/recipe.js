@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Procedure from './procedure';
+import Nav from '../../shared/nav';
 import { receipeContext } from '../../shared/receipeContext';
 import '../../styles/recipe.scss';
 import Ingredients from './ingredient';
@@ -36,6 +37,7 @@ const Recipe = ({match}) => {
 
   return ( 
     <div className="recipe">
+      <Nav />
       {
         <div key={items.id}>
           <div className="parallax" style={{

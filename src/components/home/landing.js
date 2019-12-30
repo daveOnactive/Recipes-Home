@@ -1,7 +1,9 @@
 import React from 'react';
+// import { Toggle } from '../../shared/toggle';
 import '../../styles/landing.scss';
 
 const Landing = () => {
+  // Toggle.set();
   return (
     <div>
       <svg

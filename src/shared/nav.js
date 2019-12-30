@@ -5,7 +5,7 @@ import '../styles/nav.scss';
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="toggle">
       <div className="logo">
         <Logo />
       </div>

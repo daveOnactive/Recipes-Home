@@ -1,6 +1,5 @@
 import React from 'react';
 import Home from './components/home/home.js';
-import Nav from './components/nav'
 import Recipe from './components/recipe/recipe.js';
 import Gallery from './components/gallery.js';
 import './App.scss';
@@ -12,7 +11,6 @@ function App() {
     <Router>
       <Provider>
         <div className="App">
-          <Nav />
           <Switch>
             <Route path="/" exact component = { Home } />
             <Route path="/gallery" exact component = { Gallery } />
