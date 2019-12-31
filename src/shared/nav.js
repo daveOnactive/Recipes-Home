@@ -13,7 +13,9 @@ const Nav = () => {
             <path d="M0 0H283L198.644 88H0V0Z" fill="#6F5D5D"/>
           </svg>
         </div>
-        <Logo />
+        <Link to="/" className="lin">
+          <Logo />
+        </Link>
       </div>
       <div className="nav-links">
         <div className="link-bg">

@@ -1,20 +1,21 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Landing from './landing';
 import Nav from '../../shared/nav';
-import ReceipeList from '../../shared/receipeList';
-import { receipeContext } from '../../shared/receipeContext';
 import Loader from '../../shared/loader';
+import { data } from '../../shared/fetch';
 import '../../styles/home.scss';
+const ReceipeList = React.lazy(() => import('../../shared/receipeList'));
 
+const result = data();
 
 const Home = () => {
-  const [ getReceipe ] = useContext(receipeContext);
-  const [receipeData, setReceipeData] = useState([]);
-  useEffect(()=> {
-    const data = getReceipe('all');
-    setReceipeData(data);
-  })
-  if(receipeData.length === 0) {
+  const [receipeData, setReceipeData] = useState(null)
+  useEffect(() => {
+    result.allReceipe.then(data => {
+      setReceipeData(data);
+    })
+  }, []);
+  if(!receipeData) {
     return (
       <div>
         <Loader />

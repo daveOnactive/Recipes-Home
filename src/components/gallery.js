@@ -1,16 +1,19 @@
-import React, { useContext, useState, useEffect } from 'react';
-import ReceipeList from '../shared/receipeList';
+import React, { useState, useEffect } from 'react';
 import Nav from '../shared/nav';
-import { receipeContext } from '../shared/receipeContext';
+import { data } from '../shared/fetch';
 import Loader from '../shared/loader';
 import '../styles/gallery.scss';
+const ReceipeList = React.lazy(() => import('../shared/receipeList'));
+
+const result = data();
 
 const Gallery = () => {
   const [receipes, setReceipes] = useState([]);
-  const [ getReceipe ] = useContext(receipeContext);
   useEffect(() => {
-    setReceipes(getReceipe('all'));
-  })
+    result.allReceipe.then(data => {
+      setReceipes(data);
+    })
+  }, []);
   if(receipes.length === 0) {
     return (
       <div>

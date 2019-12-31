@@ -1,22 +1,20 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Procedure from './procedure';
 import Nav from '../../shared/nav';
-import { receipeContext } from '../../shared/receipeContext';
+import { data } from '../../shared/fetch';
 import '../../styles/recipe.scss';
 import Ingredients from './ingredient';
 import Loader from '../../shared/loader';
 
+const result = data();
 const Recipe = ({match}) => {
-  const [ getReceipe ] = useContext(receipeContext);
   const [items, setItems] = useState();
   
   useEffect(() => {
-    const data = getReceipe('all');
-    getSpecificData(data, match.params.id);
-    return(() => {
-      setItems('');
+    result.allReceipe.then(data => {
+      getSpecificData(data, match.params.id);
     });
-  });
+  }, []);
 
   const getSpecificData = (data, id) => {
     data.filter(item => {

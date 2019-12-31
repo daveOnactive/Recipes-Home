@@ -7,7 +7,7 @@ const RecipeList = ({ items }) => {
   const [list, setList] = useState([]);
   useEffect(() => {
     setList(items);
-  })
+  }, []);
   return (
     <div className="recipe-container">
       {list.map(item => (
