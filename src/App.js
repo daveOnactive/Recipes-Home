@@ -5,6 +5,9 @@ import Gallery from './components/gallery.js';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route }  from 'react-router-dom';
 import { receipeProvider as Provider } from './shared/receipeContext';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHome, faThLarge } from '@fortawesome/free-solid-svg-icons';
+library.add(faHome, faThLarge);
 
 function App() {
   return (
