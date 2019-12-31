@@ -4,10 +4,15 @@ import Nav from '../../shared/nav';
 import { data } from '../../shared/fetch';
 import '../../styles/recipe.scss';
 import Ingredients from './ingredient';
+import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
+import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 import Loader from '../../shared/loader';
+import 'react-sharingbuttons/dist/main.css';
 
 const result = data();
 const Recipe = ({match}) => {
+  const url = window.location.href;
+  const [shareText, setShareText] = useState('');
   const [items, setItems] = useState();
   
   useEffect(() => {
@@ -20,7 +25,9 @@ const Recipe = ({match}) => {
     data.filter(item => {
       if(item._id === id) {
         setItems(item);
+        setShareText(item.title);
       }
+      
       return true;
     });
   };
@@ -52,6 +59,11 @@ const Recipe = ({match}) => {
             cookingDirection={ items.cookingDirections } />
         </div>
       }
+      <div className="social-btn">
+        <p>Share on: </p>
+        <Facebook url={url} />
+        <Twitter url={url} shareText={`Check out how to prepare ${shareText}`} />
+      </div>
     </div>
   )
 }
