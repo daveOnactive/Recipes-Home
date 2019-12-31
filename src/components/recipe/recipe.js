@@ -23,7 +23,7 @@ const Recipe = ({match}) => {
 
   const getSpecificData = (data, id) => {
     data.filter(item => {
-      if(item._id === id) {
+      if(item.title === id) {
         setItems(item);
         setShareText(item.title);
       }

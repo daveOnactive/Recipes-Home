@@ -1,9 +1,7 @@
 @import './variables.scss';
 
 .container {
-  background: addColor(minor-color);
-  overflow-y: auto;
-  height:100vh;
+  background: addColor(use);
   .landing-page {
     width: 100%;
     min-height: 60vh;
