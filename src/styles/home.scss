@@ -36,3 +36,32 @@
     }
   }
 }
+
+section {
+  h2 {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: addColor(main-color);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  .btn-case {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  button.show-more {
+    background: none;
+    outline: none;
+    color: addColor(main-color);
+    border: 3px solid addColor(main-color);
+    border-radius: 10px;
+    padding: .6rem 1rem;
+    font-weight: bolder;
+    margin: 1.5rem 2rem;
+    &:hover {
+      background: addColor(main-color);
+      color: addColor(use);
+    }
+  }
+}

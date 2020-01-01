@@ -11,7 +11,7 @@ const RecipeList = ({ items }) => {
   return (
     <div className="recipe-container">
       {list.map(item => (
-          <div key = { item._id } className="card">
+          <article key = { item._id } className="card">
             <div className="recipe-image">
               <img src={item.imageUrl} alt="food" />
             </div>
@@ -24,7 +24,7 @@ const RecipeList = ({ items }) => {
                 view Receipe
               </button>
             </Link>
-          </div>
+          </article>
       ))}
     </div>
   )

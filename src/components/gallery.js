@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../shared/nav';
 import { data } from '../shared/fetch';
 import Loader from '../shared/loader';
 import '../styles/gallery.scss';
@@ -23,12 +22,11 @@ const Gallery = () => {
   }
   return (
     <div>
-      <Nav />
-      <div className="gallery-container">
-        <div>
+      <main className="gallery-container">
+        <section>
           <ReceipeList items = { receipes } />
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   )
 }
