@@ -15,10 +15,10 @@ const RecipeList = ({ items }) => {
             <div className="recipe-image">
               <img src={item.imageUrl} alt="food" />
             </div>
-            <div className="recipe-content">
+            <header className="recipe-content">
               <h4>{ item.title }</h4>
               <p>{ item.description.slice(0, 70) }...</p>
-            </div>
+            </header>
             <Link to={`/recipe/${item.title}`} className="link">
               <button type="button" className="recipe-btn">
                 view Receipe

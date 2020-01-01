@@ -4,7 +4,7 @@ import '../../styles/recipe.scss';
 
 const Ingredients = ({ingredient}) => {
   return (
-    <div className="ingeligent">
+    <article className="ingeligent">
       <h3>
         ingredients
       </h3>
@@ -16,7 +16,7 @@ const Ingredients = ({ingredient}) => {
           <li key={item}>{item}</li>
         ))}
       </ol>
-    </div>
+    </article>
   )
 }
 

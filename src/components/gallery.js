@@ -7,13 +7,13 @@ const ReceipeList = React.lazy(() => import('../shared/receipeList'));
 const result = data();
 
 const Gallery = () => {
-  const [receipes, setReceipes] = useState([]);
+  const [receipes, setReceipes] = useState(null);
   useEffect(() => {
     result.allReceipe.then(data => {
       setReceipes(data);
     })
   }, []);
-  if(receipes.length === 0) {
+  if(!receipes) {
     return (
       <div>
         <Loader />
@@ -23,6 +23,11 @@ const Gallery = () => {
   return (
     <div>
       <main className="gallery-container">
+        <header>
+          <h2>
+            available recipes
+          </h2>
+        </header>
         <section>
           <ReceipeList items = { receipes } />
         </section>

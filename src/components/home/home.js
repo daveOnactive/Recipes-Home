@@ -23,12 +23,12 @@ const Home = () => {
     )
   }
   return(
-    <div className="container">
+    <main className="container">
       <div className="landing-page">
         <Landing />
-        <div className="landing-page-content">
+        <header className="landing-page-content">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sunt deserunt quod repellat provident dolore aliquid magni! Accusantium, voluptates itaque! Expedita unde enim magnam rem!</p>
-        </div>
+        </header>
       </div>
       <section>
         <h2>top recipes</h2>
@@ -41,7 +41,7 @@ const Home = () => {
           </Link>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

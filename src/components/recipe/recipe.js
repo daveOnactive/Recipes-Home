@@ -44,17 +44,17 @@ const Recipe = ({ match }) => {
       <main>
         {
           <div key={items.id}>
-            <div className="parallax" style={{
+            <section className="parallax" style={{
               backgroundImage: `url(${items.imageUrl})`
             }}>
-              <div className="para-content">
+              <header className="para-content">
                 <h3>{items.title}</h3>
                 <p>{items.description}</p>
-              </div>
-            </div>
-            <article>
+              </header>
+            </section>
+            <section>
               <Ingredients ingredient={items.ingredient} />
-            </article>
+            </section>
             <section>
               <Procedure
                 beforeYouCook={items.beforeYouCook}

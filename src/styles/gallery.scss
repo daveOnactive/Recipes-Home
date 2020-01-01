@@ -7,4 +7,14 @@
   div {
     position: relative;
   }
+
+  header {
+    h2 {
+      font-variant: small-caps;
+      text-align: center;
+      color: addColor(main-color);
+      font-weight: bolder;
+      font-size: 2rem;
+    }
+  }
 }
