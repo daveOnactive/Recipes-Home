@@ -5,10 +5,9 @@ import '../../styles/recipe.scss';
 const Procedure = ({ beforeYouCook, cookingDirection }) => {
   return (
     <div>
-      <div className="title">
-        <h2>how to prepare</h2>
-      </div>
-
+      <header className="title">
+        <h3>how to prepare</h3>
+      </header>
       <div className="cook">
         <h3>before you cook</h3>
         {beforeYouCook.map(item => (

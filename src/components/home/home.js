@@ -35,7 +35,7 @@ const Home = () => {
         <ReceipeList items = { receipeData } />
         <div className="btn-case">
           <Link to={'/gallery'}>
-            <button className="show-more">
+            <button type="button" className="show-more">
               Show all
             </button>
           </Link>
