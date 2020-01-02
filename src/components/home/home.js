@@ -4,6 +4,8 @@ import Landing from './landing';
 import Loader from '../../shared/loader';
 import { data } from '../../shared/fetch';
 import '../../styles/home.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import InstallButton from './install-btn';
 const ReceipeList = React.lazy(() => import('../../shared/receipeList'));
 
 const result = data();
@@ -30,13 +32,17 @@ const Home = () => {
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo sunt deserunt quod repellat provident dolore aliquid magni! Accusantium, voluptates itaque! Expedita unde enim magnam rem!</p>
         </header>
       </div>
+      <InstallButton/>
       <section>
         <h2>top recipes</h2>
         <ReceipeList items = { receipeData } />
         <div className="btn-case">
           <Link to={'/gallery'}>
             <button type="button" className="show-more">
-              Show all
+              Show all <FontAwesomeIcon 
+                icon="arrow-alt-circle-right"
+                color="#ffdd4b3"
+              />
             </button>
           </Link>
         </div>
