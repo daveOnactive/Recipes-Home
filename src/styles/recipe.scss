@@ -6,7 +6,7 @@
 }
 .parallax {
   background-size: 100% 100%;
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   position: relative;
   @include desktop() {
@@ -18,7 +18,7 @@
     color: addColor(sub-color);
     z-index: 2;
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     background: rgba(0, 0, 0, .5);
     display: flex;
     flex-direction: column;

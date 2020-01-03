@@ -24,16 +24,16 @@ const Nav = () => {
           </svg>
         </div>
         <div className="links-ctn">
-          <Link to="/" className="link">
+          <Link to="/" className="link" title="home">
             <FontAwesomeIcon
               icon="home"
-              color="#fdd4b3"
+              color="#fcc395"
             />
           </Link>
-          <Link to="/gallery" className="link">
+          <Link to="/gallery" className="link" title="gallery">
             <FontAwesomeIcon
               icon="th-large"
-              color="#fdd4b3"
+              color="#fcc395"
             />
           </Link>
         </div>

@@ -2,6 +2,10 @@
 
 .App {
   overflow-x: hidden;
+  line-height: 1.4;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 1.5px;
 }
 
 .svg {
@@ -29,4 +33,16 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: addColor(use);
+}
+
+.footer {
+  text-align: center;
+  font-weight: bold;
+  padding: 0;
+  .dark {
+    color: addColor(main-color);
+  }
+  .light {
+    color: #fff;
+  }
 }

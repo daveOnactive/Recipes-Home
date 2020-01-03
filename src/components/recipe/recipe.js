@@ -7,6 +7,7 @@ import Facebook from 'react-sharingbuttons/dist/buttons/Facebook'
 import Twitter from 'react-sharingbuttons/dist/buttons/Twitter'
 import Loader from '../../shared/loader';
 import 'react-sharingbuttons/dist/main.css';
+import Footer from '../../shared/footer';
 
 const result = data();
 const Recipe = ({ match }) => {
@@ -67,7 +68,9 @@ const Recipe = ({ match }) => {
           <Facebook url={url} />
           <Twitter url={url} shareText={`Check out how to prepare ${shareText}`} />
         </div>
+        <Footer type={'light'} />
       </main>
+      
     </div>
   )
 }

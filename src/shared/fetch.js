@@ -10,7 +10,7 @@ export const singleData = (id) => {
 };
 
 const getAllData = async () => {
-  const api = 'http://localhost:4000/api/receipe';
+  const api = 'https://recipes-homes-api.herokuapp.com/api/recipe';
   try {
     const response = await fetch(api);
     const data = await response.json();

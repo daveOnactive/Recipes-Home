@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { data } from '../shared/fetch';
 import Loader from '../shared/loader';
 import '../styles/gallery.scss';
+import Footer from '../shared/footer';
 const ReceipeList = React.lazy(() => import('../shared/receipeList'));
 
 const result = data();
@@ -31,6 +32,7 @@ const Gallery = () => {
         <section>
           <ReceipeList items = { receipes } />
         </section>
+        <Footer type={'dark'} />
       </main>
     </div>
   )

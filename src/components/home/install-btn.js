@@ -25,7 +25,7 @@ const InstallButton = () => {
   return (
     <div className="install-btn">
       <button type="button" onClick={install} ref={btnRef}>
-      Add to Home Screen
+      Install App
       <span>
         <FontAwesomeIcon
           icon="plus-circle"

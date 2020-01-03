@@ -35,7 +35,7 @@
     }
     .recipe-btn {
       background: none;
-      border: 2.5px solid addColor(minor-color);
+      border: 2.5px solid addColor(use);
       outline: none;
       font-weight: bold;
       padding: 0.5rem 1rem;
@@ -43,8 +43,14 @@
       color: #fff;
       margin: 1rem 0;
       cursor: pointer;
+      transition: transform .5s;
       &:hover {
-        background: addColor(minor-color);
+        background: addColor(use);
+        color: addColor(main-color);
+        transform: translateY(-7px);
+      }
+      &:active {
+        transform: scale(.9);
       }
     }
   }
