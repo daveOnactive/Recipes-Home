@@ -12,12 +12,13 @@ const ReceipeList = React.lazy(() => import('../../shared/receipeList'));
 const result = data();
 
 const Home = () => {
-  const [receipeData, setReceipeData] = useState(null)
+  const [receipeData, setReceipeData] = useState(null);
   useEffect(() => {
     result.allReceipe.then(data => {
       setReceipeData(data);
     })
   }, []);
+
   if (!receipeData) {
     return (
       <div>
@@ -38,7 +39,7 @@ const Home = () => {
         <InstallButton />
         <section>
           <h2>top recipes</h2>
-          <ReceipeList items={receipeData} />
+          <ReceipeList items={receipeData.slice(0, 3)} />
           <div className="btn-case">
             <Link to={'/gallery'} className="link">
               <button type="button" className="show-more">

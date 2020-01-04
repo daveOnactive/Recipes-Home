@@ -21,7 +21,7 @@ const RecipeList = ({ items }) => {
             </header>
             <Link to={`/recipe/${item.title}`} className="link">
               <button type="button" className="recipe-btn">
-                view Receipe
+                View Recipe
               </button>
             </Link>
           </article>
