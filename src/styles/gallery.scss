@@ -18,3 +18,38 @@
     }
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  // align-self: center;
+  // justify-content: center;
+  align-items: center;
+  .form-container {
+    display: flex;
+    background: addColor(main-color);
+    padding: .3rem 1rem;
+    border-radius: 20px;
+    @include desktop() {
+      padding: .5rem 1rem;
+    }
+    input {
+      border: none;
+      outline: none;
+      text-align: center;
+      background: none;
+      color: addColor(use);
+      width: 200px;
+      font-size: 1.1rem;
+      &::placeholder {
+        color: addColor(use);
+      }
+      @include desktop() {
+        width: 300px;
+      }
+    }
+    .search-btn {
+      cursor: pointer;
+    }
+  }
+}

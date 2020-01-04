@@ -6,10 +6,13 @@
 }
 .parallax {
   background-size: 100% 100%;
-  height: 77vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   @include desktop() {
+    height: 100vh;
+  }
+  @include small() {
     height: 100vh;
   }
   .para-content {
@@ -18,13 +21,16 @@
     color: addColor(sub-color);
     z-index: 2;
     width: 100%;
-    min-height: 77vh;
+    min-height: 90vh;
     background: rgba(0, 0, 0, .5);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     @include desktop() {
+      height: 100vh;
+    }
+    @include small() {
       height: 100vh;
     }
     h3 {
@@ -96,4 +102,21 @@
   align-items: center;
   text-align: center;
   padding-bottom: 2rem;
+}
+
+.react-sharing-button__link {
+  // width: 7% !important;
+  display: flex;
+  span {
+    font-size: .6rem !important;
+    @include desktop() {
+      font-size: .9rem !important;
+    }
+  }
+  .react-sharing-button__icon {
+    font-size: .6rem !important;
+    @include desktop() {
+      font-size: .9rem !important;
+    }
+  }
 }

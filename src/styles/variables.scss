@@ -7,6 +7,7 @@ $colors: (
 
 $desktop: 800px;
 $ipad: 740px;
+$small: 300px;
 
 @function addColor($color-name) {
   @return map-get($map: $colors, $key: $color-name )
@@ -14,6 +15,12 @@ $ipad: 740px;
 
 @mixin desktop {
   @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$small}) {
     @content;
   }
 }
