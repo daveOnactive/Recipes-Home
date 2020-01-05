@@ -32,7 +32,7 @@ const Home = () => {
     )
   }
   return (
-    <div className="container">
+    <div className="contain">
       <main>
         <div className="landing-page">
           <Landing />

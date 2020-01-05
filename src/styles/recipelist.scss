@@ -19,6 +19,11 @@
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 0 8px #888;
+    cursor: pointer;
+    transition: transform .8s;
+    &:hover {
+      transform: scale(.9);
+    }
     .recipe-image {
       @include desktop() {
         width: 100%;

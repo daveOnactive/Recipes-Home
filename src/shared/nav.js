@@ -13,7 +13,7 @@ const Nav = () => {
             <path d="M0 0H283L198.644 88H0V0Z" fill="#6F5D5D"/>
           </svg>
         </div>
-        <Link to="/" className="lin">
+        <Link to="/" className="lin" title="logo">
           <Logo />
         </Link>
       </div>
@@ -28,6 +28,7 @@ const Nav = () => {
             <FontAwesomeIcon
               icon="home"
               color="#fcc395"
+              size="1x"
             />
           </Link>
           <Link to="/gallery" className="link" title="gallery">
