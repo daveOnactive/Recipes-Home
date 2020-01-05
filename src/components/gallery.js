@@ -5,6 +5,7 @@ import Footer from '../shared/footer';
 import ReceipeList from '../shared/receipeList';
 import '../styles/gallery.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../styles/form.scss';
 
 const result = data();
 
@@ -15,6 +16,11 @@ const Gallery = () => {
       setReceipes(data);
     })
   }, []);
+
+  const searchInput = e => {
+    console.log(e.target.value);
+  }
+
   if(!receipes) {
     return (
       <div>
@@ -33,7 +39,7 @@ const Gallery = () => {
         <form>
           <div className="form-container">
             <div className="input">
-              <input typpe="text" min="3" required placeholder="try 'fried rice'" />
+              <input typpe="text" min="3" required placeholder="try 'fried rice'" name="search" onChange={searchInput} />
             </div>
             <div className="search-btn">
               <FontAwesomeIcon

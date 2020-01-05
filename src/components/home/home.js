@@ -7,6 +7,7 @@ import '../../styles/home.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import InstallButton from './install-btn';
 import Footer from '../../shared/footer';
+import '../../styles/form.scss';
 const ReceipeList = React.lazy(() => import('../../shared/receipeList'));
 
 const result = data();
@@ -18,6 +19,10 @@ const Home = () => {
       setReceipeData(data);
     })
   }, []);
+
+  const searchInput = e => {
+    console.log(e.target.value);
+  };
 
   if (!receipeData) {
     return (
@@ -39,6 +44,19 @@ const Home = () => {
         <InstallButton />
         <section>
           <h2>top recipes</h2>
+          <form>
+          <div className="form-container">
+            <div className="input">
+              <input typpe="text" min="3" required placeholder="try 'fried rice'" name="search" onChange={searchInput} />
+            </div>
+            <div className="search-btn">
+              <FontAwesomeIcon
+                icon="search"
+                color="#fcc395"
+              />
+            </div>
+          </div>
+        </form>
           <ReceipeList items={receipeData.slice(0, 3)} />
           <div className="btn-case">
             <Link to={'/gallery'} className="link">
