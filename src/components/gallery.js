@@ -5,7 +5,7 @@ import Footer from '../shared/footer';
 import ReceipeList from '../shared/receipeList';
 import '../styles/gallery.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../styles/form.scss';
+import Search from '../shared/search';
 
 const result = data();
 
@@ -23,11 +23,6 @@ const Gallery = () => {
       setPageNumber(page);
     });
   }, []);
-
-  const searchInput = e => {
-    console.log(e.target.value);
-     setCurrentPage(2);
-  }
 
   // Get current posts
   const indexOfLastRecipe = currentPage * recipePerPage;
@@ -86,19 +81,7 @@ const Gallery = () => {
             available recipes
           </h2>
         </header>
-        <form>
-          <div className="form-container">
-            <div className="input">
-              <input typpe="text" min="3" required placeholder="try 'fried rice'" name="search" onChange={searchInput} />
-            </div>
-            <div className="search-btn">
-              <FontAwesomeIcon
-                icon="search"
-                color="#fcc395"
-              />
-            </div>
-          </div>
-        </form>
+        <Search recipes = {receipes} />
         <section>
           <ReceipeList items = { currentRecipe } />
         </section>
