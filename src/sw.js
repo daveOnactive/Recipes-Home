@@ -6,7 +6,9 @@ const precacheManifest = [];
 
 workbox.routing.registerRoute(
   new RegExp('https://recipes-homes-api.herokuapp.com/api/recipe'),
-  workbox.strategies.cacheFirst()
+  workbox.strategies.cacheFirst({
+    cacheName: 'data-cache'
+  })
 );
 
 workbox.routing.registerRoute(
@@ -22,6 +24,18 @@ workbox.routing.registerRoute(
       }),
     ],
   }),
-); 
+);
+
+self.addEventListener('install', () => {
+  const channel = new BroadcastChannel('service-worker-channel');
+  channel.postMessage({ promptToReload: true });
+  channel.onmessage = (message) => {
+    if(message.data.skipWaiting) {
+      self.skipWaiting();
+    }
+  }
+})
 
 workbox.precaching.precacheAndRoute(precacheManifest);
+
+//Cool
