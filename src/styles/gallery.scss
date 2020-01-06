@@ -4,7 +4,7 @@
   min-height: 100vh;
    box-sizing: border-box;
    padding-top: 4rem;
-  div {
+  section {
     position: relative;
   }
 
@@ -48,7 +48,18 @@
   }
 }
 
-.hide {
-  visibility: hidden;
+.page-count {
+  background: addColor(main-color);
+  padding: .5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #888;
+  span {
+    color: addColor(use);
+    font-size: bolder;
+  }
+}
+
+.hide-btn {
+  z-index: -10;
 }
 

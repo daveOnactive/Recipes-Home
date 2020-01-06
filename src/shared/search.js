@@ -17,19 +17,21 @@ const Search = ({recipes}) => {
   };
 
   const matchInput = e => {
-    e.preventDefault();
-    let result = [];
-    recipes.filter(items => {
-      let title = items.title.toLowerCase();
-      let compare = input.toLowerCase();
-      if(title.includes(compare)) {
-        result.push(items);
-      }
-      return true;
-    });
-    setHide(false)
-    setSearchResult(result);
-    setInput('');
+    if(input !== '') {
+      e.preventDefault();
+      let result = [];
+      recipes.filter(items => {
+        let title = items.title.toLowerCase();
+        let compare = input.toLowerCase();
+        if(title.includes(compare)) {
+          result.push(items);
+        }
+        return true;
+      });
+      setHide(false)
+      setSearchResult(result);
+      setInput('');
+    }
   };
 
   return (
