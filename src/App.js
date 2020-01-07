@@ -24,7 +24,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/gallery" exact component={Gallery} />
             <Route path="/recipe/:id" component={Recipe} />
-            <Redirect to="/" component={Home} />
+            {/* <Redirect to="/" component={Home} /> */}
           </Suspense>
         </Switch>
       </div>
